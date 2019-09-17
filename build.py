@@ -25,7 +25,7 @@ SCALE_CHARACTER_GLYPHS_THRESHOLD = 0.1
 
 prefixed_fonts = [
     # Apache 2.0 license
-    "fonts/*.ttf"
+    "input-fonts/*.ttf"
 ]
 
 #### Fonts that need to be renamed. ####
@@ -64,7 +64,7 @@ for pattern in prefixed_fonts:
         ligaturize_font(
             input_file,
             ligature_font_file=None,
-            output_dir="fonts/output/",
+            output_dir="output-fonts/",
             prefix=LIGATURIZED_FONT_NAME_PREFIX,
             output_name=None,
             copy_character_glyphs=COPY_CHARACTER_GLYPHS,
@@ -80,7 +80,7 @@ for pattern, name in renamed_fonts.items():
         ligaturize_font(
             input_file,
             ligature_font_file=None,
-            output_dir="fonts/output/",
+            output_dir="output-fonts/",
             prefix=None,
             output_name=name,
             copy_character_glyphs=COPY_CHARACTER_GLYPHS,
