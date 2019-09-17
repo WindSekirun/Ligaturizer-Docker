@@ -19,8 +19,8 @@ USER root
 WORKDIR /usr/local/src
 
 # Install requirements
-RUN apt update
-RUN apt install build git wget unzip make --no-install-recommends python-fontforge
+RUN apt-get update
+RUN apt-get install git wget unzip make python-fontforge --no-install-recommends
 
 # Clone latest of Ligaturizer
 RUN git clone --depth 1 https://github.com/ToxicFrog/Ligaturizer .
