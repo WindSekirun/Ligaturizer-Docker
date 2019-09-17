@@ -14,7 +14,6 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
           org.label-schema.version=$VERSION \
           org.label-schema.schema-version="1.0"
 
-ENV FILE_NAME_PREFIX=
 USER root
 
 WORKDIR /usr/local/src
@@ -33,9 +32,11 @@ RUN wget -O fira.zip https://github.com/tonsky/FiraCode/releases/download/2/Fira
 RUN unzip -o fira.zip 'otf/*' -d fonts/fira/distr
 
 COPY build.py .
+COPY entrypoint.sh .
 
 RUN rm -rf /usr/src/app/input-fonts/
 RUN rm -rf /usr/src/app/output-fonts/
 
-CMD cat build.py
-CMD ["make"]
+RUN chmod +x entrypoint.sh
+
+CMD ["./entrypoint.sh"]
