@@ -26,8 +26,7 @@ RUN apt-get update
 RUN apt-get install wget make fontforge --no-install-recommends -y
 
 # Clone latest of Ligaturizer
-RUN git clone --depth 1 https://github.com/ToxicFrog/Ligaturizer.git .
-RUN git checkout python-3
+RUN git clone -b python-3 --single-branch https://github.com/ToxicFrog/Ligaturizer.git .
 
 RUN rm -rf fonts
 
