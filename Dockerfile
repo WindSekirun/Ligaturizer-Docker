@@ -26,6 +26,8 @@ RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/te
 # Clone latest of Ligaturizer
 RUN git clone --depth 1 https://github.com/rojiani/Ligaturizer-2.0.git .
 
+RUN rm -rf fonts
+
 # Download FiraCode version 2 and unzip
 RUN mkdir -p fonts/fira/distr
 RUN wget -O fira.zip https://github.com/tonsky/FiraCode/releases/download/2/FiraCode_2.zip
@@ -36,6 +38,9 @@ COPY entrypoint.sh .
 
 RUN rm -rf input-fonts/
 RUN rm -rf output-fonts/
+
+VOLUME input-fonts/
+VOLUME output-fonts/
 
 RUN chmod +x entrypoint.sh
 
