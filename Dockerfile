@@ -39,7 +39,3 @@ RUN rm -rf /usr/src/app/output-fonts/
 
 CMD cat build.py
 CMD ["make"]
-
-# COPY entrypoint.sh .
-# RUN chmod +x entrypoint.sh
-# CMD ["./entrypoint.sh"]
