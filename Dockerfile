@@ -25,7 +25,7 @@ RUN apk add --no-cache --virtual build git wget unzip make
 RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing fontforge
 
 # Clone latest of Ligaturizer
-RUN git clone --depth 1 https://github.com/ToxicFrog/Ligaturizer.git .
+RUN git clone --depth 1 https://github.com/rojiani/Ligaturizer-2.0.git .
 
 # Download FiraCode version 2 and unzip
 RUN mkdir -p fonts/fira/distr
