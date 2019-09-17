@@ -19,6 +19,7 @@ USER root
 WORKDIR /usr/local/src
 
 # Install requirements
+RUN apt-get install software-properties-common ca-certificates apt-transport-https --no-install-recommends -y
 RUN add-apt-repository ppa:silnrsi/smith-py3
 RUN apt-get update
 RUN apt-get install git wget unzip make fontforge --no-install-recommends -y
