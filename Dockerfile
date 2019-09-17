@@ -20,7 +20,7 @@ WORKDIR /usr/local/src
 
 # Install requirements
 RUN apk update
-RUN apk add --no-cache --virtual build git wget unzip make fontforge
+RUN apk add --no-cache --virtual build git wget unzip make
 RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing fontforge
 
 # Clone latest of Ligaturizer
