@@ -60,6 +60,7 @@ for pattern in prefixed_fonts:
         print("Error: pattern '%s' didn't match any files." % pattern)
         sys.exit(1)
     for input_file in files:
+        print('input %s' % input_file)
         ligaturize_font(
             input_file,
             ligature_font_file=None,
