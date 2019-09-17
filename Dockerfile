@@ -19,10 +19,11 @@ USER root
 WORKDIR /usr/local/src
 
 # Install requirements
-RUN apt-get install software-properties-common ca-certificates apt-transport-https --no-install-recommends -y
+RUN dpkg --add-architecture i386
+RUN rm -rf /var/lib/apt/list/* && apt-get update && apt-get install ca-certificates curl gnupg2 software-properties-common git unzip file apt-utils lxc apt-transport-https -y
 RUN add-apt-repository ppa:silnrsi/smith-py3
 RUN apt-get update
-RUN apt-get install git wget unzip make fontforge --no-install-recommends -y
+RUN apt-get install wget make fontforge --no-install-recommends -y
 
 # Clone latest of Ligaturizer
 RUN git clone --depth 1 https://github.com/ToxicFrog/Ligaturizer.git .
