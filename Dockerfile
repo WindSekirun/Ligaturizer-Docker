@@ -39,5 +39,6 @@ RUN rm -rf /usr/src/app/output-fonts/
 COPY entrypoint.sh .
 RUN chmod +x entrypoint.sh
 
+VOLUME /input
 VOLUME /output
 CMD ["./entrypoint.sh"]
