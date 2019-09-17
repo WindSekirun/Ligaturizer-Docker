@@ -36,6 +36,9 @@ RUN unzip -o fira.zip 'otf/*' -d fonts/fira/distr
 COPY build.py .
 COPY entrypoint.sh .
 
+RUN mkdir -p input-fonts/
+RUN mkdir -p output-fonts/
+
 VOLUME input-fonts/
 VOLUME output-fonts/
 
