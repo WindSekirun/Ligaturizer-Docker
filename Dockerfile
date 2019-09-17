@@ -19,11 +19,13 @@ USER root
 WORKDIR /usr/local/src
 
 # Install requirements
+RUN add-apt-repository ppa:silnrsi/smith-py3
 RUN apt-get update
-RUN apt-get install git wget unzip make python-fontforge --no-install-recommends -y
+RUN apt-get install git wget unzip make fontforge --no-install-recommends -y
 
 # Clone latest of Ligaturizer
-RUN git clone --depth 1 https://github.com/ToxicFrog/Ligaturizer .
+RUN git clone --depth 1 https://github.com/ToxicFrog/Ligaturizer.git .
+RUN git checkout python-3
 
 RUN rm -rf fonts
 
