@@ -3,4 +3,4 @@ unzip -j -o hack.zip -d $(pwd)/input
 
 mkdir -p /output
 
-docker run --rm -v $(pwd)/input:/input -v $(pwd)/output:/output --user $(id -u) windsekirun/ligaturizer-docker
+docker run --rm -v $(pwd)/input:/usr/local/src/input-fonts -v $(pwd)/output:/usr/local/src/output-fonts --user $(id -u) windsekirun/ligaturizer-docker

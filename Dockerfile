@@ -1,4 +1,4 @@
-FROM python:3.7-alpine
+FROM python:2.7-alpine3.9
 
 MAINTAINER WindSekirun <windsekirun@gmail.com>
 
@@ -20,11 +20,11 @@ WORKDIR /usr/local/src
 
 # Install requirements
 RUN apk update
-RUN apk add --no-cache --virtual build git wget unzip make
-RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing fontforge
+RUN apk add --no-cache --virtual build git wget unzip make fontforge
+# RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing fontforge
 
 # Clone latest of Ligaturizer
-RUN git clone --depth 1 https://github.com/rojiani/Ligaturizer-2.0.git .
+RUN git clone --depth 1 https://github.com/ToxicFrog/Ligaturizer .
 
 RUN rm -rf fonts
 
