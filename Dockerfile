@@ -30,7 +30,7 @@ RUN rm -rf fonts
 
 # Download FiraCode and unzip
 RUN mkdir -p fonts/fira/distr
-RUN wget -O fira.zip https://github.com/tonsky/FiraCode/releases/download/2/FiraCode_1.207.zip
+RUN wget -O fira.zip https://github.com/tonsky/FiraCode/releases/download/1.207/FiraCode_1.207.zip
 RUN unzip -o fira.zip 'otf/*' -d fonts/fira/distr
 
 COPY build.py .
