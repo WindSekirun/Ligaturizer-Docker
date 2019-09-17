@@ -30,7 +30,7 @@ RUN git clone --depth 1 https://github.com/rojiani/Ligaturizer-2.0.git .
 # Download FiraCode version 2 and unzip
 RUN mkdir -p fonts/fira/distr
 RUN wget -O fira.zip https://github.com/tonsky/FiraCode/releases/download/2/FiraCode_2.zip
-RUN unzip fira.zip -o 'otf/*' -d fonts/fira/distr
+RUN unzip -o fira.zip 'otf/*' -d fonts/fira/distr
 
 COPY build.py .
 
