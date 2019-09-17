@@ -1,0 +1,1 @@
+docker run --rm -v $(pwd)/input:/input -v $(pwd)/output:/output .

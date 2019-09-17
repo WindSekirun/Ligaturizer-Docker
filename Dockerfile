@@ -2,6 +2,18 @@ FROM python:3.7-alpine
 
 MAINTAINER WindSekirun <windsekirun@gmail.com>
 
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VERSION
+LABEL org.label-schema.build-date=$BUILD_DATE \
+          org.label-schema.name="Ligaturizer-Docker" \
+          org.label-schema.description="Make any font using Ligaturizer powered by Docker " \
+          org.label-schema.vcs-ref=$VCS_REF \
+          org.label-schema.vcs-url="https://github.com/WindSekirun/Ligaturizer-Docker" \
+          org.label-schema.vendor="WindSekirun" \
+          org.label-schema.version=$VERSION \
+          org.label-schema.schema-version="1.0"
+
 ENV FONT_NAME_PREFIX=
 ENV FILE_NAME_PREFIX=
 USER root
