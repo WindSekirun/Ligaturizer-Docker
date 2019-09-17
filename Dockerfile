@@ -34,8 +34,8 @@ RUN unzip -o fira.zip 'otf/*' -d fonts/fira/distr
 COPY build.py .
 COPY entrypoint.sh .
 
-RUN rm -rf /usr/src/app/input-fonts/
-RUN rm -rf /usr/src/app/output-fonts/
+RUN rm -rf input-fonts/
+RUN rm -rf output-fonts/
 
 RUN chmod +x entrypoint.sh
 
