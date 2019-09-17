@@ -20,7 +20,7 @@ WORKDIR /usr/local/src
 
 # Install requirements
 RUN dpkg --add-architecture i386
-RUN rm -rf /var/lib/apt/list/* && apt-get update && apt-get install ca-certificates software-properties-common git unzip file apt-utils lxc apt-transport-https wget make -y
+RUN rm -rf /var/lib/apt/list/* && apt-get update && apt-get install ca-certificates software-properties-common git unzip python3 wget make -y
 RUN add-apt-repository ppa:silnrsi/smith-py3 && apt-get update && apt-get install fontforge --no-install-recommends -y
 
 # Clone latest of Ligaturizer, only 'python-3' branch.
