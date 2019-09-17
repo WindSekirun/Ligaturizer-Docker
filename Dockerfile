@@ -36,7 +36,7 @@ RUN mkdir -p /output
 RUN rm -rf input-fonts/
 RUN rm -rf /usr/src/app/output-fonts/
 
-COPY entrypoint.sh
+COPY entrypoint.sh .
 RUN chmod +x entrypoint.sh
 
 VOLUME /output
