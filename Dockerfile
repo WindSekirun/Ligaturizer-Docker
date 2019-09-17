@@ -31,7 +31,7 @@ RUN mkdir -p fonts/fira/distr
 RUN wget -O fira.zip https://github.com/tonsky/FiraCode/releases/download/2/FiraCode_2.zip
 RUN unzip fira.zip 'otf/*' -d fonts/fira/distr
 
-RUN touch /input
+RUN mkdir -p /input
 RUN mkdir -p /output
 RUN rm -rf input-fonts/
 RUN rm -rf /usr/src/app/output-fonts/
