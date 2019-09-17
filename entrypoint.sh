@@ -1,7 +1,6 @@
 #!/bin/sh
 
 ls -la
-
-cat build.py
+ls -la input-fonts
 
 make
